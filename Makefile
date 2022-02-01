@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: fkenned <marvin@42.fr>                     +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/26 17:38:29 by fkenned           #+#    #+#              #
-#    Updated: 2021/04/26 17:38:30 by fkenned          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 .PHONY: all clean fclean re bonus
 
 SRCS	=	ft_atoi.c		\
@@ -64,10 +52,10 @@ RM		=	rm -f
 CC		=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 
-.c.o:
+.c.o:		libft.h
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS} libft.h
+${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
 			ranlib ${NAME}
 

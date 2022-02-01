@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fkenned <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/26 19:01:50 by fkenned           #+#    #+#             */
-/*   Updated: 2021/04/26 19:01:53 by fkenned          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #	include "libft.h"
 
 static int	ft_split_col(char const *s, char c)
@@ -93,14 +81,12 @@ static char	**ft_split_len_word(char **array, char const *s, char c, int col)
 
 char	**ft_split(char const *ss, char c)
 {
-	int		i;
 	int		col;
 	char	**array;
 	char	*s;
 
 	if (!ss)
 		return (NULL);
-	i = 0;
 	s = ft_strtrim(ss, &c);
 	if (!s)
 		return (NULL);
